@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detail Siswa</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <button class="btn-back" onclick="window.location.href='index.html'">← Kembali</button>
+      <h1 class="header-title">Detail Siswa</h1>
+    </div>
+  </div>
+
+  <!-- PROFILE HERO -->
+  <div class="profile-hero">
+    <div class="avatar" id="avatarInisial">ZJ</div>
+    <div class="profile-info">
+      <h2 id="detailNama">-</h2>
+      <span class="nis-badge" id="detailNIS">NIS: -</span>
+    </div>
+  </div>
+
+  <!-- DETAIL CONTENT -->
+  <div class="content">
+    <div class="detail-card">
+
+      <div class="detail-section-title">DATA PRIBADI</div>
+      <div class="detail-row"><span class="detail-label">Nomor Urut</span><span class="detail-value" id="dNoUrut">-</span></div>
+      <div class="detail-row"><span class="detail-label">Tempat, Tgl Lahir</span><span class="detail-value" id="dTtl">-</span></div>
+      <div class="detail-row"><span class="detail-label">Jenis Kelamin</span><span class="detail-value" id="dJk">-</span></div>
+      <div class="detail-row"><span class="detail-label">Agama</span><span class="detail-value" id="dAgama">-</span></div>
+
+      <div class="detail-section-title">DATA SEKOLAH</div>
+      <div class="detail-row"><span class="detail-label">Kelas</span><span class="detail-value" id="dKelas">-</span></div>
+
+      <div class="detail-section-title">KONTAK</div>
+      <div class="detail-row"><span class="detail-label">Telepon</span><span class="detail-value" id="dTelepon">-</span></div>
+      <div class="detail-row"><span class="detail-label">Alamat</span><span class="detail-value" id="dAlamat">-</span></div>
+
+      <div class="detail-section-title">DATA ORANG TUA</div>
+      <div class="detail-row"><span class="detail-label">Nama Ortu/Wali</span><span class="detail-value" id="dNamaOrtu">-</span></div>
+      <div class="detail-row"><span class="detail-label">Telp Ortu/Wali</span><span class="detail-value" id="dTeleponOrtu">-</span></div>
+      <div class="detail-row"><span class="detail-label">Ditambahkan</span><span class="detail-value" id="dTanggal">-</span></div>
+
+    </div>
+
+    <!-- TOMBOL AKSI -->
+    <div class="detail-actions">
+      <button class="btn-edit" id="btnEdit">✏️ Edit Data</button>
+      <button class="btn-hapus" id="btnHapus">🗑️ Hapus</button>
+    </div>
+  </div>
+
+  <!-- MODAL KONFIRMASI HAPUS -->
+  <div class="modal-overlay" id="modalHapus" style="display:none;">
+    <div class="modal-box">
+      <div class="modal-icon">⚠️</div>
+      <h3>Yakin ingin menghapus data siswa ini?</h3>
+      <p class="modal-sub">Data yang dihapus tidak bisa dikembalikan</p>
+      <div class="modal-actions">
+        <button class="btn-tidak" onclick="tutupModal()">Tidak</button>
+        <button class="btn-ya-hapus" onclick="konfirmasiHapus()">Ya, Hapus</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/detail.js"></script>
+</body>
+</html>

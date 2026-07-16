@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Siswa</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <span class="header-icon">📋</span>
+      <h1 class="header-title">Data Siswa</h1>
+    </div>
+    <button class="btn-tambah" onclick="window.location.href='tambah.html'">
+      + Tambah Siswa
+    </button>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="search-wrap">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Cari NIS, nama, kelas..." oninput="filterSiswa()"/>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <p class="jumlah-siswa" id="jumlahSiswa">0 siswa terdaftar</p>
+
+    <div class="table-wrap">
+      <table class="table-siswa">
+        <thead>
+          <tr>
+            <th>NO.</th>
+            <th>NIS</th>
+            <th>NAMA SISWA</th>
+            <th>AKSI</th>
+          </tr>
+        </thead>
+        <tbody id="tableSiswa">
+          <!-- diisi oleh JS -->
+        </tbody>
+      </table>
+
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <p>📭 Belum ada data siswa</p>
+        <small>Tekan "+ Tambah Siswa" untuk menambahkan</small>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
